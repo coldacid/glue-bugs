@@ -49,7 +49,20 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DataTypes\PlatformerValues.Generated.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\BaseEntity.Generated.cs">
+      <DependentUpon>BaseEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ChildEntity.cs" />
+    <Compile Include="Entities\ChildEntity.Generated.cs">
+      <DependentUpon>ChildEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\GrandchildEntity.cs" />
+    <Compile Include="Entities\GrandchildEntity.Generated.cs">
+      <DependentUpon>GrandchildEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs">
@@ -59,6 +72,7 @@
     <Compile Include="GlueControl\GlueControlManager.Generated.cs" />
     <Compile Include="Performance\IEntityFactory.Generated.cs" />
     <Compile Include="Performance\PoolList.Generated.cs" />
+    <Compile Include="Platformer\Enums.Generated.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup\CameraSetup.cs" />
@@ -126,6 +140,10 @@
     <Content Include="Content\shader.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="content\entities\baseentity\platformervaluesstatic.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>PlatformerValuesStatic</Name>
+    </None>
     <None Include="Libraries\DesktopGl\Debug\FlatRedBall.Forms.dll" />
     <None Include="Libraries\DesktopGl\Debug\GumCoreXnaPc.dll" />
     <None Include="Libraries\DesktopGl\Debug\StateInterpolation.dll" />
